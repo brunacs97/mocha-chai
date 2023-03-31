@@ -32,6 +32,30 @@ describe('Teste de subtração ', () => {
     });
 });
 
+describe('Teste de multiplicação ', () => {
+    it.only('Deve multiplicar 4 e 5 resultando em 20' , () => {
+       let resultado = Calculadora.multi(4, 5)
+       expect(resultado).to.be.eq(20)
+    });
+
+    it.only('Deve multiplicar -4 e 5 resultando em -20' , () => {
+        let resultado = Calculadora.multi(-4, 5)
+        expect(resultado).to.be.eq(-20)
+    });
+});
+
+describe('Teste de divisão ', () => {
+    it.only('Deve divir 20 por 2 resultando em 10' , () => {
+       let resultado = Calculadora.divi(20, 2)
+       expect(resultado).to.be.eq(10)
+    });
+
+    it.only('Deve dividir -10 e 2 resultando em -5' , () => {
+        let resultado = Calculadora.divi(-10, 2)
+        expect(resultado).to.be.eq(-5)
+    });
+});
+
 
 
 //Testando mocha e chai
