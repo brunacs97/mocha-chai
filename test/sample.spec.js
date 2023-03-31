@@ -1,7 +1,40 @@
 import assert from 'assert'
 import chai from 'chai'
+import Calculadora from '../src/Calculadora.js';
 
 const expect = chai.expect
+
+//Testes da Calculadora.js
+
+describe('Teste de soma ', () => {
+    it.only('Deve somar 4 e 5 resultando em 9' , () => {
+       let resultado = Calculadora.soma(4, 5)
+       expect(resultado).to.be.eq(9)
+    });
+
+    it.only('Deve somar -4 e 5 resultando em 1' , () => {
+        let resultado = Calculadora.soma(-4, 5)
+        expect(resultado).to.be.eq(1)
+    });
+});
+
+//Testando com TDD
+
+describe('Teste de subtração ', () => {
+    it.only('Deve subtrair 4 e 5 resultando em -1' , () => {
+       let resultado = Calculadora.sub(4, 5)
+       expect(resultado).to.be.eq(-1)
+    });
+
+    it.only('Deve somar -4 e 5 resultando em 1' , () => {
+        let resultado = Calculadora.soma(-4, 5)
+        expect(resultado).to.be.eq(1)
+    });
+});
+
+
+
+//Testando mocha e chai
 
 describe('Meu primeiro teste ', () => {
     it('Verifica variavel "aux"' , () => {
@@ -10,7 +43,7 @@ describe('Meu primeiro teste ', () => {
         expect(aux).to.be.equals(2).and.to.be.a('number');
     });
 
-    it.only('Verifica outra variavel' , () => {
+    it('Verifica outra variavel' , () => {
         let aux = 'carro'
         expect(aux).to.be.equals('carro').and.not.equals('charrete')
     });
